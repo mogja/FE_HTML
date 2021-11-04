@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+    <style>
+        .one{
+            border : 50px solid violet;
+            padding: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /* background: black; */
+        }
+        .one{
+            border : 50px solid violet;
+            padding: 50px;
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /* background: black; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1. border는 width에 포함되지 않는다.
+        2. padding 도 width, height에 포함되지 않는다. 
+        -> border와 padding을 양수 지정해주면 크기만 커진다.
+        3. padding지정 시 백그라운드 컬러에 영향을 받는다.
+     -->
+    <div>hello</div>
+    <div class="one">hello</div>
+    <div class="two">hellotwo</div>
+</body>
+</html>

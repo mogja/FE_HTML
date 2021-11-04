@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변크기 단위</title>
+    <style>
+        html, body{
+            font-size: 20px;
+        }
+        /* 2em : body의 기본폰트인 16px의 2배 크게 ->body 폰트 따로 지정 안해둘 시 */
+        p{
+            font-size: 3em; 
+            font-weight: 700;
+        }
+        /* rem 단위는 문서의 최상위 요소, 즉 html 요소의 크기의 몇 배인지로 크기를 정합니다
+            em 단위는 상위 요소 크기의 몇 배인지로 크기를 정합니다. */
+        div{
+            font-size: 2em;
+        }
+
+        .one{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 가변크기 단위 : em, %, rem, vw, vh -->
+    <!-- 바디의 폰트 기본 크기는 : 16px 외우쟈 -->
+    <p>hello world</p>
+    <h1>hello world</h1>
+    <p>hello world</p>
+
+
+        <!-- div안의 helloworld는 80px -->
+    <div>
+        <!-- 10*2 =20px (body를 20으로 해줬을 때)-->
+        <div>
+            <!-- 20*2 =40px -->
+            <div class="one">
+                <!-- 40*2 =80px -->
+                <!-- class지정해서 2rem해주면 바디 폰트 사이즈에 2배한 크기로 됨. 따로 지정 안하면 80px이 됨-->
+                <!-- 태그선택자보다 클래스 선택자가 높으니까 그런거임 -->
+                hello world
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

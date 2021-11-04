@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css로 나만의 캐릭터 만들기</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+        }
+        .face{
+
+            /* 왜 left, top, transform 모두 설정해줘야 하는 걸까? */
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50% 50% 30% 30%;
+            background: rgb(53, 33, 8);
+            height: 300px;
+            width: 400px;
+            box-sizing: border-box;
+            /* line-height: 80px; */
+            font-size: 28px;
+            transition: all 1s;
+         } 
+
+         .bottom{
+             position: absolute;
+             top:140px;
+         }
+
+         .chick{
+            rotate: 50deg;
+            border-radius: 47%;
+            height: 150px;
+            width: 170px;
+            background: rgb(216, 158, 86);
+
+         }
+         .chick.left{
+            position: absolute;
+            margin-right: 100px;
+            /* top: 100px; */
+         }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="cookie">
+        <div class="hair">
+            <div class="hair left"></div>
+            <div class="hair right"></div>
+        </div>
+        <div class="face">
+            <div class="top">
+                <div class="eye left"></div>
+                 <div class="eye right"></div>
+            </div>
+            <div class="bottom">
+                <div class="chick left"></div>
+                <div class="chick right"></div>
+                <div class="nose"></div>
+                <div class="mouse">
+                    <div class="tongue"></div>
+                </div>
+            </div>
+ 
+            <div class="bottom">
+
+            </div>
+        </div>
+    </div>
+
+
+
+     <!-- <div class="face">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose">
+          <div class="mustache"></div>
+      </div>
+
+      그림 그릴 떄 css에서 
+box-sizing: border-box; 해놓고 가야 해 필수 
+  </div> -->
+    
+</body>
+</html> 
