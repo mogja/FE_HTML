@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부정선택자</title>
+    <style>
+        /*one이 아닌 것만 색상 변경*/
+        li:not(.one){
+            color:rgb(146, 146, 25);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="one">와우</li>
+        <li class="one">와우</li>
+        <li class="one">와우</li>
+        <li class="two">와우</li>
+        <li class="one">와우</li>
+    </ul>
+</body>
+</html>

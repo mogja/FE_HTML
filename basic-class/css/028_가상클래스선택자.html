@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자</title>
+    <style>
+        .foo:nth-child(odd){ /*홀수번쨰 자식*/
+            color:pink;
+        }
+        .foo:nth-child(even){ /*짝수번쨰 자식*/
+            color:rgb(170, 14, 40);
+        }
+
+        .foo:nth-child(2n+1){ /*홀수번째 자식*/
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        가상 클래스 선택자는 실제 html에 존재하지 않는 class이지만 마치 class 인 것 처럼 쓰임
+        VS
+        가상 요소 선택자 
+
+     -->
+
+     <ul>
+         <li class="foo">1</li>
+         <li class="foo">2</li>
+         <li class="foo">3</li>
+         <li class="foo">4</li>
+         <li class="foo">5</li>
+     </ul>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소선택자</title>
+    <style>
+        /*가상요소는 없는 요소이기 때문에 브라우저상에서 cm 드래그하거나 선택을 할 수 없음*/
+        p::before {
+            content: '가수'
+        }
+        p::after {
+            content: 'cm'
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        가상요소선택자는 콜론2개, 가상클래스선택자 콜론 1개
+        가상요소선택자와 가상클래스선택자 반드시 구분하세요. 
+     -->
+   <p>10</p>
+
+</body>
+</html>
