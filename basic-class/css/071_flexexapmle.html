@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent1{
+            position: relative;
+            height: 400px;
+            background: green;
+        }
+
+        .child1{
+            position: absolute;
+            top:50%;
+            margin-top: 50px; 
+            /* margin-top은 본인의 길이의 반만큼만올리면 수직정렬할 수 있어. */
+            height: 100px;
+            width: 50px;
+            background:orange;
+        }
+
+
+        .parent2{
+            position: relative;
+            top:400px;
+            height: 400px;
+            background: green;
+        }
+
+        .child2{ 
+            /* translate으로도 수직 정렬할 수 있는데 이게 더 좋아 구체적인 픽셀 정하지 않아도 
+            퍼센테이지로 하니까 자동으로 해줌 */
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            height: 100px;
+            width: 50px;
+            background:rgb(238, 194, 113);
+        }
+
+        .child3{
+            margin:0 auto;
+            height: 100px;
+            width: 50px;
+            background:pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent1">
+        <div class="child1"></div>
+    </div>
+
+
+    <div class="parent2">
+        <div class="child2"></div>
+        <div class="child3"></div>
+    </div>
+</body>
+</html>

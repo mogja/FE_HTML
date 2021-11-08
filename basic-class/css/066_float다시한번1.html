@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float해결-clear</title>
+    <style>
+
+        ul{
+            /* overflow:hidden은 부모가 float된 자식을 알기 위해 사용. 형제가 float된 형제 알아보는 건 아님 */
+            overflow: hidden;
+        }
+        li{
+            height: 100px;
+            background: darkorange;
+        }
+        li:nth-child(2){
+            float:left ;
+            width: 100%;
+            background: darkred;
+        }
+        li:nth-child(3){
+            /* 같은 형제입장에서 float된 형제를 알고 싶을 떄 (형제끼리 겹칠 때 ) 형제에게 클리어를 준다 */
+            /* clear: left; */
+            /* clear:left를 안하면 오른쪽에 점이 생기는데 이 점은 float요소를 알아봐서 글자처럼 인식해서 옆으로  밀려난 것 
+            list의 문자표는 글자였다! */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

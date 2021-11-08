@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float실습</title>
+    <style>
+
+
+        div{
+            height: 100px;
+        }
+   
+        .one{
+            width:600px;
+            background: gold;
+        }
+     
+        .clear-fix div:nth-child(1){
+            width: 200px;
+            background: palevioletred;
+            float:left;
+        }
+        .clear-fix div:nth-child(2){
+            background: green;
+            width: 200px;
+            float:left;
+        }
+        .clear-fix div:nth-child(3){
+            width: 200px;
+            background: rgb(27, 77, 153);
+            float:left;
+        }
+        .three{
+            clear:both;
+            width:600px;
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="one"></div>
+        <div class="two clear-fix">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="three"></div>
+   
+
+</body>
+</html>

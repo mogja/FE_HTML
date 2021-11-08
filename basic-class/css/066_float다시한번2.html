@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float해결-overflow</title>
+    <style>
+
+        ul{
+            /* overflow:hidden은 부모가 float된 자식을 알기 위해 사용. 형제가 float된 형제 알아보는 건 아님 */
+            overflow: hidden;
+        }
+        li{
+            float:left;
+            height: 100px;
+            background: darkorange;
+            width: 300px;
+        }
+      
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

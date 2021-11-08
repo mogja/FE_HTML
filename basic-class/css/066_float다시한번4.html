@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float해결-clear-fix</title>
+    <style>
+
+        ul{
+        }
+        /* clear-fix */
+        /* 부모요소에 가상요소 after를 설정해줌.
+        > 마지막 자식 요소로 css로 가상요소를 만들어줌 . html상에는 나타나지 않음 */
+        .clear-fix::after{
+            /* 이렇게 해주면 부모가 인식을 해서 html 크롬창에서 li들이 인식이 돼. */
+            display:block;
+            content:'';
+            clear: both;
+        }
+
+        /* before는 가장 첫번째 가상 요소를 만들어. */
+
+
+        li{
+            float:left;
+            height: 100px;
+            background: darkorange;
+            width: 300px;
+        }
+      
+    </style>
+</head>
+<body>
+    <ul class="clear-fix">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

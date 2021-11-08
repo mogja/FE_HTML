@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naver_login_box</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        .box{
+           margin-left: 30px;
+           margin-top: 30px;
+        }
+        .box1{
+            position: absolute;
+            padding: 10px;
+            width:600px;
+            background: #dae1e6;
+            border: rgb(189, 186, 189) solid 0.5px;
+        }
+
+        .header_box{
+            color:grey;
+            font-size:16px;
+        }
+
+        .main_box{
+            background: rgb(28, 207, 28);
+            color: white;
+            width:600px;
+            height: 100px;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 110px;
+            border: none;
+            
+        }
+
+        .footer_box::after{
+            content:'';
+            display: block;
+        }
+        
+        .footer_box{
+            line-height: 10px;
+            color:rgb(66, 64, 64);
+        }
+        .login{
+          
+            float: left;
+        }
+        .footer_box.new{
+           
+            float: right;
+            right:200px;
+        }
+        .img{
+            width: 16px;
+            height: 16px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+            <div class="box1">
+
+                <div class="header_box">
+                    <p>네이버를 더 안전하고 편리하게 이용하세요</p>
+                </div>
+                <button class="main_box">
+                    <img src="./images/title.png" alt="lock">
+                    로그인
+                </button>
+                <div class="footer_box">  
+                    <div class="footer_box login">
+                        <img src="./images/lock.png" alt="lock">
+                        아이디 비밀번호찾기
+                    </div>              
+                    <div class="footer_box new">
+                        <img src="./images/user.png" alt="lock">
+                        회원가입
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 아이디 비밀번호 , 회원가입은 a태그로 처리해서 누르면 넘어갈 수 있게 해주세용
+        div는 웬만하면 쓰지 마시고 .. 
+    article section 많이 쓰시네.. -->
+</body>
+</html>
+
+
+

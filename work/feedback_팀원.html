@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>character1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {            
+            margin: 0;
+            padding: 0;
+            background: grey;
+        }
+        .babylion {
+            width: 400px;
+            height: 400px;
+            margin: 300px auto 0;
+            position: relative;
+            --skin: burlywood;
+            --dark: brown;
+            /* -----------------------------------------------
+            Ejey : 여기에 배경색을 넣어보세요, 곰돌이가 영역밖으로 도망간게 보여요~
+            */
+        }
+        .face {
+            /* -----------------------------------------------
+            Ejey : 모든것은 얼굴을 기준으로 해야하니까 여기가 position:relative인게 좋겠죠?
+            ----------------------------------------------- */
+            margin: 100px;
+            width: 400px;
+            height: 380px;
+            border-top-left-radius: 60%;
+            border-top-right-radius: 60%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border: 5px solid brown;
+            background: burlywood;
+            opacity:0.8;
+            
+        }
+        /*
+        아직 제가 position이 어떻게 적용되는지 잘 모르는 게 원인인 것 같은데  
+        눈 양쪽이 얼굴 위로 안 나타나요 ㅠㅠ
+
+        .face .eye.left {
+            left: 200px;  <-- 어떤 속성,값을 넣어야 하는지도 모르겠어요 (예를 들어 
+            무언가를 이 자리로 배치하려면 마진, 패딩, left, right 등을 얼마씩 줘야 한다~~ 같은..
+            이런 건 어떻게 공부하면 좋을까요?)
+            // -----------------------------------------------
+            // Ejey -> left,top,right,bottom은 position:relative,absolute,fixed에 사용해요.
+            // Position을 선언하지 않으면, position:static이기때문에 left를 주어도 먹지않아요.
+            // 그냥 우측으로 이동하고싶으면 좌측에 여백을 두면 되는데, 이때는 margin-left: 를 사용해요 ^^
+            // 이부분은 무한하게 많이 만들어보는게 답입니다! 만들어보면서 막히는거 계속 물어보세요~~!
+            // -----------------------------------------------
+            width: 100;
+            height: 100;
+            border-radius: 50%;
+            background-color: #222;
+        }
+
+        .face .eye.right {
+            left: 200px;
+            width: 100;
+            height: 100;
+            border-radius: 50%;
+            background-color: #222;
+        }
+
+        */
+            
+
+        /* 귀는 생각한 모양처럼 나오기는 했는데, 귀랑 inner(진한부분) 둘 다 양쪽이
+        대칭이 아니에요. 대칭시킬 때 양쪽 값을 똑같이 주고 부호(+-)만 바꾸어 주었는데
+        왜 모양이 다른지 모르겠습니다. */
+
+        /* -----------------------------------------------
+            Ejey : 귀안쪽의 위치가 귀겉쪽의 위치의 좌우 정 중앙이 아니라 왼쪽으로 쏠려있어서,
+            오른쪽이 달라보이는거예요. 중앙은 정확한 수치로 맞춰줘야해요.
+
+            .ear의 크기 : border를 포함하여 120px이므로, 실제로는 110px
+            .ear안쪽의 크기는 : 50px;
+            자, 그럼 ear안쪽이 정중앙에 오려면 몇을 이동해야할까요? 
+            그리고 이부분은, 뒷부분에 계산식이 따로있어서 그때 배우시면됩니다. 하지만,
+            지금은 정확히 중앙을 계산하는 방법은 알고있어야 해요.
+        ----------------------------------------------- */
+
+
+
+        
+        .ear.left {
+            left: 100px;
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            z-index: -1;
+            background-color: var(--skin);
+            border: 5px solid var(--dark);
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 30%;
+            border-bottom-right-radius: 30%;
+            transform: translate(-30px) rotate(-30deg);
+        }
+        .ear.right {
+            right: -100px;
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            z-index: -1;
+            background-color: var(--skin);
+            border: 5px solid var(--dark);
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 30%;
+            border-bottom-right-radius: 30%;
+            transform: translate(30px) rotate(30deg);
+            
+        }
+        .ear.left .inner {
+            width: 50px;
+            height: 40px;
+            position: absolute;
+            z-index: -1;
+            background-color: var(--dark);
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 30%;
+            border-bottom-right-radius: 30%;
+            transform: translate(25px, 25px) rotate(-20deg);
+        }
+        .ear.right .inner {
+            width: 50px;
+            height: 40px;
+            position: absolute;
+            z-index: -1;
+            background-color: var(--dark);
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 30%;
+            border-bottom-right-radius: 30%;
+            transform: translate(25px, 25px) rotate(20deg);    
+        }
+
+     
+    
+
+        /* 위의 것이 안 되어 눈동자, 코, 입은 시도도 못 했어요 ㅠ_ㅠ!*/
+
+        
+        /* -----------------------------------------------
+        TIP : 
+        1. 눈,코,입,귀의 기준은 얼굴이 되게 하세요
+        2. 귀의 안쪽의 기준은 귀겉쪽이 되게하세요(이건 되어있어요)
+        3. 귀는 얼굴을 기준으로 좌/우로 나뉘어야 합니다.
+        4. 눈도 얼굴을 기준으로 좌/우로 나뉘어야 합니다.
+        5. 코는 얼굴을 기준으로 중앙으로 가면되요.
+        6. 입도 얼굴을 기준으로 중앙으로 보내세요 ^^
+        7. 현재는 .babylion박스가 기준이 되어있네요^^ 
+        ----------------------------------------------- */
+
+                
+    </style>
+</head>
+<body>
+    <div class="babylion">
+        <div class="face">
+            <div class="eye left">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye right">
+                <div class="pupil"></div>
+            </div>
+        <div class="ear left">
+            <div class="inner"></div>
+        </div>
+        <div class="ear right">
+            <div class="inner"></div>
+        </div>
+        </div>
+
+        <div class="nose"></div>
+        <div class="mouth"></div>
+    </div>
+    
+</body>
+</html>
