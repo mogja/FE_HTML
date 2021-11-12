@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @keyframes move {
+            from {
+                top:200px;
+                transform: rotateX(-180deg);
+                /* perspective: (180deg); */
+            }
+            to {
+                transform: rotateX(0);
+                /* perspective: (0); */
+            }
+        }
+        body{
+            transform-origin: bottom;
+            transform-style: preserve-3d;
+            animation: move 2s;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background: cadetblue;
+            
+            /* perspective: (100deg); */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
