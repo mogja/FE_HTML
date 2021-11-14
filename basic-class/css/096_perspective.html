@@ -1,0 +1,108 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        /* index.html */
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cont-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 800px;
+        }
+
+        .item-card .first{
+            /* rotateY(720deg);, rotateX(720deg);, rotateZ(720deg); 모두 실습해보세요. */
+            transform: scale(0.1) rotateY(720deg);
+            width: 500px;
+            height: 500px;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6f/Joker_Card_Image.jpg");
+            transition: all 1.2s;
+        }
+
+        .item-card:hover {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            transform: scale(1) rotateY(0deg);
+        }
+    </style>
+</head>
+<body class="cont-card">
+    <div class="item-card front">
+    </div>
+    <div class="item-card back">
+    </div>
+</body>
+</html> -->
+
+<!-- 팀원 코드 -->
+
+    <!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 30px;
+    }
+
+    .container {
+        width: 150px;
+        height: 180px;
+        perspective: 800px;
+    }
+
+    .container .item {
+        width: 150px;
+        height: 180px;
+        border: 1px solid #828282;
+        font-size: 35px;
+        backface-visibility: hidden;
+        transition: 1s;
+    }
+
+    .container .item.front {
+        background: aqua;
+        position: absolute;
+        transform: rotateY(0deg);
+    }
+
+    .container:hover .item.front {
+        transform: rotateY(180deg);
+    }
+
+    .container .item.back {
+        background: black;
+        transform: rotateY(-180deg);
+    }
+
+    .container:hover .item.back {
+        transform: rotateY(0deg);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item front">
+            <img src="./poker.jpg" alt="poker card" width="100%" height="100%">
+        </div>
+        <div class="item back">
+            <img src="./pokerback.png" alt="poker card" width="100%" height="100%">
+        </div>
+    </div>
+</body>
+
+</html>

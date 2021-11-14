@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼</title>
+    <style>
+     
+        .btn{
+            text-align: center;
+            line-height: 100px;
+            position: relative;
+            border: 4px dotted  darkorange;
+            font-size: 32px;
+            position: relative;
+            overflow: hidden;
+            width: 200px;
+            height: 100px;
+            background: cornsilk;
+            color: palevioletred;
+            overflow: hidden;
+            /* background-image: url('./building/star.png');*/
+        } 
+
+        .btn::before{
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            
+            background-color: red;
+            top:0;
+            left: 0;
+            transform: translateY(-100px);
+            transition: all .2s;
+            z-index: 1;
+        }
+
+        .btn:active::before{
+            transform: translateY(0);
+        }
+
+        .btn::after{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:10px;
+            left:0;
+            background-color: rgb(13, 13, 54);
+            transform: translateY(200px);
+            content: "Good night";
+            /* background:navy; */
+            /* background: url(building/star.png); */
+           
+            
+        }
+        .btn:active::after{
+            transform: translateY(0);
+            perspective: 800px;
+            
+            background-image: url(building/star.png);
+            background-size: 150px;
+            z-index: 1;
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <div class="btn">HEY click!</div>
+
+</body>
+</html>

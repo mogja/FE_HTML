@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+            /* align-items: flex-end; */
+            height: 100vh;
+        }
+        li{
+            width: 50px;
+            height: 50px;
+            background: lightcoral;
+            border: 2px solid brown;
+        }
+        .first{
+            order:2;
+        }
+        .second{
+            order:3;
+        }
+        
+        .third{
+           order:1;
+        }
+        .forth{
+            order:-1;
+        }
+        .fifth{
+            /* align-self: flex-start; */
+            /* align-self : 개별적인 item의 위치 속성 바꿀  때 사용 */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="first">1</li>
+        <li class="second">2</li>
+        <li class="third">3</li>
+        <li class="fourth">4</li>
+        <li class="fifth">5</li>
+    </ul>
+</body>
+</html>

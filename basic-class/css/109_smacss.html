@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모듈의 분리</title>
+    <style>
+        /* smacss 모듈 - subclass */
+        /* 클래스로 해당 스타일을 지정. 기본 클래스에 공통 점 때려 박고 서브 클래스에 색이나 길이 같이 서로다른 속성 값주기 */
+        .btn{
+            display: inline-block;
+            width: 300px;
+            padding: 20px 10px;
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+            color: darkgreen;
+            background-color: darksalmon;
+            border: 2px solid darkslateblue;
+        }
+
+        .btn.btn-small{
+            width: 80px;
+            /* padding: 10px 0; */
+            font-size: 14px;
+        }
+
+        .btn.btn-long{
+            width: 160px;
+        }
+    </style>
+</head>
+<body>
+    <a href="" class="btn btn-small">아이디/비밀번호 찾기</a>
+    <a href="" class="btn btn-long">로그인</a>
+</body>
+</html>

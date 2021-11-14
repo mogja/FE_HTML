@@ -15,14 +15,28 @@
         .yellow{background:yellow}
 
         .left_side{
-            justify-content: space-between;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
         }
 
+        .right_side{
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: space-between;
+        }
+
+        .center{
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+        }
 
         article{  
-        background:black;
-        width:350px;
-        height:300px;
+          display: flex;
+          background:black;
+          width:350px;
+          height:300px;
         }
 
         .right_side, .center, .left_side{

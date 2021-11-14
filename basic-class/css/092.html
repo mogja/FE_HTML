@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @keyframes move{
+            0%{
+                background-color: orangered;
+                transform:translate(0,0);
+            }
+            10% {
+                background-color: orange;
+                transform:translate(300px,0);
+            }
+            20%{
+                background-color: green;
+                transform: translate(300px, 300px);
+            }
+            40%{
+                background-color: rgb(70, 70, 201);
+                transform:translate(0, 300px);
+            }
+
+            60%{
+                background-color: darkblue;
+                transform: translate(300px, 300px);
+            }
+            80%{
+                background-color: darkorchid;
+                transform:translate(300px,0);
+            }
+            100%{
+                background-color: rgb(204, 50, 165);
+                transform:translate(0,0);
+            }
+        } */
+
+        @keyframes move{
+            0%{
+                background-color: orangered;
+                transform:translate(0,0);
+            }
+            33.3%  {
+                background-color: orange;
+                transform:translate(500px,0);
+            }
+            66.6%{
+                background-color: green;
+                transform: translate(500px, 500px);
+            }
+            100%{
+                background-color: rgb(70, 70, 201);
+                transform:translate(0, 500px);
+            }
+        }
+        div{
+            width:100px;
+            height:100px;
+            background-color: dimgray;
+           
+        }
+
+        div:hover{
+            animation: move 2s alternate infinite;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

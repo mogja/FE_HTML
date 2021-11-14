@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스테이트??????</title>
+    <!-- Js가 필요로 할 때 넣었다 뺄다 할 수 있는 점이 모듈과 다르다.  -->
+    <!-- 모듈은 한번 적용되면 바뀌지않는데 스테이트는 js에 종속되어서 js에 따라 바뀔 수 있다는 점에서 차이점이 있다. -->
+    <style>
+         /* 구조와 스킨의 분리 */
+        /* .btn1 {
+            font-weight: bold;
+        }
+
+        .btn2 {} */
+
+        /* .btn {
+            width: 200px;
+            height: 80px;
+            font-size: 30px;
+        }
+
+        .btn-close {
+            background: black;
+            color: #fff;
+            border: 3px dotted #fff;
+        } */
+        /* 스트럭처와 모듈의 분리 */
+        /* #main .btn {
+            width: 300px;
+            padding: 20px 10px;
+            margin: 10px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        #main .general {
+            background-color: aquamarine;
+            color: black;
+        }
+
+        #main .warning {
+            background-color: azure;
+            color: blue;
+        } */
+
+
+        /* smacss 모듈 - subclass */
+        /* .btn {
+            display: inline-block;
+            width: 300px;
+            padding: 20px 10px;
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+            background-color: brown;
+        }
+
+        .btn.btn-small {
+            width: 80px;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .btn.btn-long {
+            width: 160px;
+        } */
+
+        /* smacss 스테이트 */
+        .tabnav {
+            display: flex;
+        }
+
+        .tabnav li {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .tabnav li:first-child {
+            border-left: 1px solid black;
+        }
+
+        .tabnav li a {
+            display: block;
+            padding: 10px 30px;
+            text-decoration: none;
+        }
+
+        .is-active {
+            background-color: rgb(172, 131, 71);
+        }
+
+        .is-active a {
+            pointer-events: none;
+            color: red;
+        }
+
+        /* 모듈 */
+        /* .mod {
+            border: 1px solid;
+        } */
+
+
+        /* 테마 */
+        /* .mod {
+            border-color: blue;
+        } */
+
+         /* bem block */
+        /* class="green-box"
+        class="error-red" */
+    </style>
+</head>
+<body>
+        <ul class="tabnav">
+            <li class="tabnav__item"><a href="" class="tabnav__link">탭1</a></li>
+            <!-- a의 클래스 네임음 tabnav__item__link가 아니라 아이템은 빼줌 -> 노션에 있음 -->
+            <li><a href="">탭2</a></li>
+            <li><a href="">탭3</a></li>
+            <li><a href="">탭4</a></li>
+        </ul>
+
+        <!-- BEM Modifier    네이밍 -->
+        <section class="chapter-baseball">
+            <button type="button" class="btn"></button>
+            <button type="button" class="btn btn-close"></button>
+        </section>
+
+        
+
+</body>
+</html>
