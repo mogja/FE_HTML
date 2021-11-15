@@ -1,0 +1,63 @@
+/* * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; } */
+
+/*-----header-----*/
+header{
+    border-bottom:1px solid black;
+    text-align: center;
+    width: 100%;
+}
+h1{
+    display: inline-block;
+    font-size:16px;
+}
+
+nav div{
+    width: 1px;
+    height: 20px;
+    background-color: black;
+}
+
+.nav-btn{
+    float:right;
+    margin-right: 15px;
+}
+.nav-btn .one{
+    transform-origin: left top;
+    transform: translate(7px, 12px) rotate(45deg);
+}
+
+.nav-btn .two{
+    transform-origin: left bottom;
+    transform: translate(7px,-13px) rotate(-45deg);
+}
+
+/*-----main----- */
+
+.main{
+    padding: 25px 24px;
+}
+
+.title{
+    font-size: 20px;
+}
+/*-----input-----*/
+.inp-login input{
+    display: block;
+    width: 100%;
+    padding:10px;
+    border-radius: 5px;
+    border:1px solid #c4c4c4;
+    /* color: #767676; */
+}
+
+.inp-login input ::placeholder{
+    color: #767676;
+}
+
+.inp-login .id{
+    margin-bottom: 10px;
+}
+
+/* ------checkbot----- */
+
+/*-----link-----*/
