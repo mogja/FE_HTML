@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 실전 예제</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="../../font/fontawesome/css/all.css">
+    <style>
+        /* reset */
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        /* style */
+        nav{
+            background-color: palevioletred;
+            padding: 0 15px;
+        }
+
+        .logo{
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .item{
+            padding: 10px;
+        }
+
+        a:hover{
+            color:#222;
+        }
+
+        .menu{
+            display: flex;
+            /* wrap을 해서 밑으로 아이템들이 떨어지도록 */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .menu li a{
+            display: block;
+            padding: 10px;
+        }
+
+        .meni li.subitem a{
+            padding-left: 20px;
+        }
+        .subitem{
+            display: none;
+            /* 개발하실 떄에는 block으로 보이도록*/
+            /* display: block; */
+        }
+
+        .icon{
+            /* 햄버거 아이콘은 창이 줄여져서 모바일이 됐을 때 보이도록 */
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="logo">
+                <a href="#">LOGO</a>
+            </li>
+            <li class="item">
+                <a href="#">ABOUT ME</a>
+            </li>
+            <li class="item">
+                <a href="#">SKILLS</a>
+            </li>
+            <li class="item has-submenu">
+                <a href="#">BLOG</a>
+                <ul class="submenu">
+                    <li class="subitem">
+                        <a href="#">HTML</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#">CSS</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#">JAVASCRIPT</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#">INFRA</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#">NODE</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="#">CONTACT</a>
+            </li>
+            <li class="icon">
+                <a href="#"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

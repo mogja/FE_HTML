@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>holy-grail layout</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /* reset */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* util */
+        .sr-only {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            border: 10px solid black;
+        }
+
+        .item{
+            border: 10px solid burlywood;
+        }
+
+        .item:nth-child(1){
+            border: 10px solid green;
+            width: 100%;
+        }
+
+        .item:nth-child(2){
+            border: 10px solid goldenrod;
+            width: 70%;
+        }
+
+        .item:nth-child(3){
+            border: 10px solid purple;
+            width: 30%;
+        }
+
+        .item:nth-child(4){
+            border: 10px solid paleturquoise;
+            width: 100%;
+        }
+
+        @media screen and (max-width:800px) {
+            .item:nth-child(2){
+            width: 100%;
+        }
+
+        .item:nth-child(3){
+            width: 100%;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="item">
+        <h1 class="sr-only">제목1</h1>
+        <nav>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </nav>
+    </header>
+
+    <section class="item">
+        <h2 class="sr-only">제목2</h2>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem enim a quas assumenda molestiae dignissimos in autem quidem, impedit iusto, eligendi quaerat. Eligendi culpa ex, error sapiente fugit neque! Voluptatibus!
+            Error ex magnam aliquid veritatis deleniti vero exercitationem amet impedit aspernatur placeat. Ad odit tempore nesciunt, doloremque inventore, expedita doloribus officia mollitia excepturi voluptatum placeat deleniti delectus est aspernatur illum?
+            Corporis esse, nulla, odit tempore voluptatum veniam alias eveniet, veritatis dolor voluptate molestiae corrupti ut odio. Magni ipsa laboriosam, quod saepe dolores quis esse necessitatibus nemo ex, nisi sit numquam.
+        </article>
+    </section>
+
+    <aside class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas at corporis magni, ullam ea recusandae molestiae saepe, earum dolorem quod eveniet repellat sapiente aliquid delectus consequatur distinctio reprehenderit fugit unde?
+        In nisi aspernatur quae fugit nesciunt! Nobis, molestias officiis. Consectetur illo, ipsa laboriosam doloremque assumenda quam magnam. Nam, qui perferendis nulla eaque iste sed natus vel reprehenderit quis facilis in.
+    </aside>
+
+    <footer class="item">
+        footer
+    </footer>
+</body>
+</html>
