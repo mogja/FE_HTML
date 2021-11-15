@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-3 폰트 다운받아서 사용하기</title>
+    <!-- 
+   format에는 truetype(인쇄글꼴과 화면글꼴이 같음)eot (embeded-open-type, 익스플로러 8 이하)
+            woff (익스플로러 9 이상)등이 있음
+
+
+        rel="preconnect" 이 옵션은
+현재 페이지에서 외부 도메인의 리소스를 참고하는 것을 브라우저에게 알려 미리 외부 도메인과 연결을 설정할 수 있게 합니다.
+
+preconnect를 사용하면 브라우저가 사이트에 필요한 연결을 미리 예상할 수 있게 됩니다. 브라우저는 필요한 소켓을 미리 설정할 수 있기 때문에 DNS, TCP, TLS 왕복에 필요한 시간을 절약할 수 있게 됩니다.
+
+사이트 도메인 내에 업로드된 웹폰트가 아닌경우 이를 브라우저에게 알려줘서 미리 사전작업을 하게 해서 빠르게 연결할 수 있게 하는 역활을 합니다.
+     -->
+    <style>
+        @font-face {
+            font-family: 'Gm';
+            src: url(fontfile/GmarketSansTTFLight.ttf) format('truetype');
+        }
+
+        p {
+            font-family: 'Gm';
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur enim in a quidem laborum voluptas explicabo tempore incidunt corporis odit commodi repudiandae beatae odio, perspiciatis ullam. Labore, deserunt dolorum. Assumenda?</p>
+</body>
+</html>
