@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>holy grail layout</title>
+    <style>
+        /*  */
+         nav {
+            background-color: #222;
+         }
+        
+        .menu-container{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .menu-item{
+         
+         padding: 10px;
+         font-size: 20px;
+        }
+
+        .menu-container li a{
+            display: block;
+            padding: 10px;
+            color: darkorange;
+            text-decoration-line: none;
+        }
+
+        nav ul{
+            padding: 0;
+        }
+
+        /* main */
+        main{
+            display: flex;
+        }
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: cornsilk;
+            border: solid 3px black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .item {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: darkcyan;
+        border: solid 3px black;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    /* aside */
+    aside{
+        flex-direction: row;
+       
+    }
+
+    .ad-list li{
+        list-style: none;
+    }
+    </style>
+</head>
+<body>
+   
+        <nav>
+            <ul class="menu-container">
+                <li class="menu-item logo"><a href="#">LOGO</a></li>
+                <li class="menu-item"><a href="#">menu</a></li>
+                <li class="menu-item"><a href="#">menu</a></li>
+                <li class="menu-item"><a href="#">menu</a></li>
+                <li class="menu-item"><a href="#">menu</a></li>
+            </ul>
+        </nav>
+ 
+        <main>
+
+            <section>
+                <ul class="container">
+                    <li class="item">
+                        <img src="../basic-class/img/a.jpg" alt="섭지코지 이미지 입니다." class="item-img">
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aperiam animi eius quos dolore ex autem, nemo minima ea aspernatur, voluptatum minus voluptatibus doloremque officiis tenetur suscipit earum illum placeat.</p>
+                    </li>
+                    <li class="item">
+                        <img src="../basic-class/img/a.jpg" alt="섭지코지 이미지 입니다." class="item-img">
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aperiam animi eius quos dolore ex autem, nemo minima ea aspernatur, voluptatum minus voluptatibus doloremque officiis tenetur suscipit earum illum placeat.</p>
+                    </li>
+                    <li class="item">
+                        <img src="../basic-class/img/a.jpg" alt="섭지코지 이미지 입니다." class="item-img">
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aperiam animi eius quos dolore ex autem, nemo minima ea aspernatur, voluptatum minus voluptatibus doloremque officiis tenetur suscipit earum illum placeat.</p>
+                    </li>
+                    <li class="item">
+                        <img src="../basic-class/img/a.jpg" alt="섭지코지 이미지 입니다." class="item-img">
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aperiam animi eius quos dolore ex autem, nemo minima ea aspernatur, voluptatum minus voluptatibus doloremque officiis tenetur suscipit earum illum placeat.</p>
+                        <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aperiam animi eius quos dolore ex autem, nemo minima ea aspernatur, voluptatum minus voluptatibus doloremque officiis tenetur suscipit earum illum placeat.</p>
+                    </li>
+                </ul>
+            
+            </section>
+         
+            <aside>
+                <ul class="ad-list">
+                    <li class="ad-item">ad</li>
+                    <li class="ad-item">ad</li>
+                    <li class="ad-item">ad</li>
+                    <li class="ad-item">ad</li>
+                </ul>
+            </aside>
+        </main>
+
+    <footer>
+        <ul class="link">
+            <li class="link-item"></li>
+            <li class="link-item"></li>
+            <li class="link-item"></li>
+            <li class="link-item"></li>
+        </ul>
+    </footer>
+</body>
+</html>
