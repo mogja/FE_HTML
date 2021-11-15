@@ -1,3 +1,3 @@
-# FE_HTML
+# FE_camp
 
-* https://mogja.github.io/FE_HTML/
+* https://mogja.github.io/FE_camp/
