@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("무한대 : ", 1/0,'<br>'); // Infinity
+        document.write( "숫자가 아님" / 2 ); 
+        // NaN, 문자열을 숫자로 나누면 오류가 발생합니다.
+
+        NaN === NaN // false
+        Number.isNaN(NaN) // true, Number.isNaN을 사용하세요!
+        isNaN(undefined) // true, isNaN은 논란의 여지가 많음
+        isNaN(null) // false, 이건 또 false?
+        isNaN(-NaN) // true
+        isNaN({}) // true
+        Object.is(NaN, NaN) // true
+
+        
+    </script>
+</body>
+</html>

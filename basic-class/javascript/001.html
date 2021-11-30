@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            transition: all 2s;
+}
+    </style>
+</head>
+<body>
+    <!-- javascript 소개 -->
+    <!-- onclick은 옛날 방식 요즘은 script나 js파일을 호출해서 씀 -->
+    <h1>자바스크립트로는 어떤 것을 할 수 있나요?<h1>
+        <button type="button"
+        onclick="document.getElementById('demoOne').innerHTML = Date()">
+        <!-- 데이트라는 기능을 실행시키는데 이걸 demoOne이라는 것에 할당해라 온클릭시. -->
+        Click me (One)</button>
+        
+        <button type="button"
+        onclick="document.getElementById('demoTwo').innerHTML = 'hello world'">
+        Click me (Two)</button>
+        
+        <button type="button"
+        onclick="document.getElementById('demoThree').style.backgroundColor = 'red'">
+        Click me (Three)</button>
+        
+        <p id="demoOne"></p>
+        <p id="demoTwo"></p>
+        <p class="box" id="demoThree"></p>
+</body>
+</html>
